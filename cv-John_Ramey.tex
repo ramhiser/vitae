@@ -1,0 +1,301 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{url}
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+% Remove the bullet points.
+\renewcommand{\labelitemi}{}
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large John A. Ramey II} &  \\
+Ph.D. Candidate, Department of Statistics, Baylor University & johnramey@gmail.com \\
+Waco, Texas, USA & http://johnramey.net \\
+\end{tabular*}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Personal Statement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{center}
+  \parbox{6.762in}{My research interests are primarily in statistics with an emphasis on bioinformatics applications in the areas of statistical pattern recognition, machine learning, modern multivariate analysis, computational statistics, and Bayesian methods.}
+  \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Baylor University}{Waco, TX}{Ph.D. Statistics}{May 2012 (Anticipated)}
+	\begin{itemize}
+		\resitem{Adviser: Dean M. Young, Ph.D.}
+		%\resitem{Dissertation: To Be Determined}
+	\end{itemize}
+\item
+	\ressubheading{Baylor University}{Waco, TX}{M.Sc. Statistics}{Dec. 2009}
+\item
+	\ressubheading{Baylor University}{Waco, TX}{B.Sc. Mathematics (Minor: Computer Science)}{Aug. 2008}
+\end{itemize}
+  
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Outstanding Graduate Student - Department of Statistical Science, Baylor University\cftdotfill{\cftdotsep}2011}\\
+		\multicolumn{2}{c}{JSM Stat Bowl - Champion\cftdotfill{\cftdotsep} 2010}\\
+		\multicolumn{2}{c}{Outstanding First Year Graduate Student - Department of Statistical Science\cftdotfill{\cftdotsep}2009}\\
+		\multicolumn{2}{c}{Baylor University Dean's Scholarship \cftdotfill{\cftdotsep} 2008-2013}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{\textbf{Ramey, J. A.} and Young, P. D., ``A Comparison of Regularization Methods Applied to the Linear Discriminant Function with High-Dimensional Microarray Data,'' \emph{Journal of Statistical Computation and Simulation}. (in press)}
+	\resitem{Sego, L. H., Shulman, S. A., Anderson, K. K., Wilson, J. E., Pulsipher, B. A., Sieber, W. K., and \textbf{Ramey, J. A.}, ``A Bayesian Acceptance Sampling Model for Combining Judgmental and Randomly Selected Samples,'' \emph{Technometrics}. (minor revision)}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Submitted Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{Greer, B., Young, D., Harvill, J., and \textbf{Ramey, J.}, ``Pseudo-likelihood Intervals for the Ratio of Two Poisson Rates with Data Subject to Under-Reporting,'' \emph{Computational Statistics and Data Analysis}. (submitted)}
+\end{itemize}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications in Preparation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{\textbf{Ramey, J. A.}, Sego, L. H., and Young, D. M. ``Cluster Stability Evaluation of Gene Expression Data via Cluster Omission.'' To Be Submitted to \emph{Bioinformatics}.}
+	\resitem{\textbf{Ramey, J. A.}, Sego, L.H., and Young D. M., ``A Probabilistic Interpretation of Comembership and Similarity Indices in Clustering Evaluation with Applications to Proteomics.'' To Be Submitted to \emph{Biometrics}.}
+	\resitem{\textbf{Ramey, J. A.} and Young D. M., ``Diagonal Discriminant Analysis after Simultaneous Diagonalization of Covariance Matrices with High-Dimensional Microarray Data.'' To Be Submitted to \emph{IEEE Transactions on Knowledge and Data Engineering}.}
+	\resitem{\textbf{Ramey, J. A.} and Young D. M., ``On the Choice of Error Rate Estimators for Model Selection with Friedman's Regularized Discriminant Analysis: Beyond Cross-Validation.'' To Be Submitted to \emph{Computational Statistics and Data Analysis}.}
+	\resitem{\textbf{Ramey, J. A.}, ``A Bayesian Perspective of the Information Density Approach to Active Learning.'' To Be Submitted to \emph{International Conference on Machine Learning, 2012}.}
+	\resitem{\textbf{Ramey, J. A.}, ``{\tt activelearning}: An R Package for Querying Unlabeled Observations with Active Learning.'' To Be Submitted to \emph{Journal of Statistical Software}.}
+	\resitem{\textbf{Ramey, J. A.}, ``{\tt errorest}: An R Package for Error Rate Estimation for Statistical and Machine Learning.'' To Be Submitted to \emph{R Journal}.}
+	\resitem{\textbf{Ramey, J. A.}, ``Error Rate Estimation via High-Performance Computing and the MapReduce Framework.''}
+	\resitem{\textbf{Ramey, J. A.} and Young P. D., ``On an Adjustment to the Moore-Penrose Inverse for Improved Estimation of a Precision Matrix.''}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Conference Papers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{\textbf{Ramey, J. A.} and Young, D. M. (2010). \textit{A More Computationally Efficient Model Selection Method for Regularized Discriminant Analysis}, Joint Statistical Meetings Proceedings, Vancouver, BC, Canada.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Invited Talks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{\textbf{Ramey, J. A.} (February 2011). \emph{Diagonal Discriminant Analysis after Simultaneous Diagonalization of Covariance Matrices with High-Dimensional Data}. Pacific Northwest National Laboratory, Richland, Washington, USA.}
+\end{itemize}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Poster Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{\textbf{Ramey, J. A.} and Young, D. M. (August 2010). \emph{Efficient Model Selection for Regularized Discriminant Analysis}. Joint Statistical Meetings, Vancouver, British Columbia, Canada.}
+	\resitem{\textbf{Ramey, J. A.} (April 2010). \emph{Bayesian Regularized Logistic Regression in High-Dimensional Classification}. Instituto Panamericano de Estudios Avanzados en Probabilidad y Estad\'{i}stica: Semana en M\'{e}todos de Reducci\'{o}n de Dimensi\'{o}n. Centro de Investigaci\'{o}n en Matem\'{a}ticas, A.C. Guanajuato, Mexico.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Journal Reviewer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{Journal of Statistical Computation and Simulation}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item 
+	\ressubheading{Pacific Northwest National Laboratory}{Richland, WA}{Research Associate, National Security Internship Program}{June 2011 - Present}
+	\begin{itemize}
+		\resitem{Apply machine learning and multivariate statistical methods to genomic and proteomic data.}
+		\resitem{Construct clustering evaluation and validation methods for microarray and proteomic data.}
+		\resitem{Employ supervised, semi-supervised, unsupervised, and active learning methods along with semi-supervised clustering with large data sets to incorporate subject-matter expertise for improved performance and understanding of data.}
+	\end{itemize}
+	\item
+		\ressubheading{Statistical and Machine Learning Research Group}{Waco, TX}{Department of Statistical Science, Baylor University}{2009-present}
+	\item
+		\ressubheading{Research Experience for Undergraduates at The Ohio State University}{Columbus, OH}{Vertical Integration of Research and Education in Computational Mathematics}{Summer 2004}
+	\begin{itemize}
+		\resitem{Focused on Number Theory, especially Random Matrix Theory.}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Software Projects (Available at http://github.com/ramey)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{{\tt activelearning}: An R Package for Querying Unlabeled Observations with Active Learning.}
+	\resitem{{\tt classify}: A Supervised Classification Benchmarking Framework in R.}
+	\resitem{{\tt diagdiscrim}: An R Package for Diagonal Discriminant Analysis Models.}
+	\resitem{{\tt errorest}: An R Package for Error Rate Estimation for Statistical and Machine Learning.}
+	\resitem{{\tt regdiscrim}: An R Package for Covariance Matrix Regularization in Discriminant Analysis.}
+\end{itemize}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional Membership}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item
+		\ressubheading{Student Member -- Association for Computing Machinery}{}{}{2011-present}
+	\item
+		\ressubheading{Student Member -- Institute of Electrical and Electronics Engineers}{}{}{2011-present}
+	\item
+		\ressubheading{Founder -- R Users Group}{Waco, TX}{Department of Statistical Science, Baylor University}{2010-present}
+	\item
+		\ressubheading{Student Member -- American Statistical Association}{}{}{2008-present}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Elementary Statistics}{Baylor University}{Teacher of Record}{Aug. 2009 - May 2011}
+	\begin{itemize}
+		\resitem{Taught this freshman level course in the Statistics Department.}
+		\resitem{Developed homework, quizzes and exams for the class.}
+		\resitem{Attended weekly meetings to enhance and improve teaching skills and techniques.}
+	\end{itemize}
+\item
+	\ressubheading{Statistics Department Tutoring Lab}{Baylor University}{Graduate Teaching Assistant}{Aug. 2008 - May 2011}
+	\begin{itemize}
+		\resitem{Provided one-on-one and group tutoring to students in undergraduate statistics courses.}
+	\end{itemize}
+\item
+	\ressubheading{Statistics for Psychology Majors}{Baylor University}{Graduate Teaching Assistant}{Aug. 2008 - Jul. 2009}
+	\begin{itemize}
+		\resitem{Supplemental instruction.}
+		\resitem{Led weekly course seminars.}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Other Professional Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 
+	\ressubheading{Candidate Resources, Inc.}{Grand Prairie, TX}{Senior Web Programmer}{Jan. 2007 - Nov. 2007}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Programming and Markup Languages}{}{}{}
+	\begin{itemize}
+		\resitem{{\bf Skilled:} R}
+		\resitem{{\bf Proficient:} \LaTeX, Linux, Python, SQL, WinBUGS}
+		\resitem{{\bf Experienced:} ASP.NET, Classic ASP, C\#, C++, Java, Mathematica, MATLAB, PHP}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Miscellaneous}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{United States Soccer Federation}{}{Referee}{1995 - present}
+\end{itemize}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item
+		\ressubheading{Dr. Dean Young (Adviser)}{}{Department of Statistical Science, Baylor University}{}
+	\item	\url{Dean_Young@baylor.edu}
+	%\item \url{254.710.6183}
+	%\item Contact information available upon request.
+	\item
+		\ressubheading{Dr. John Seaman}{}{Department of Statistical Science, Baylor University}{}
+	\item	\url{John_Seaman@baylor.edu}
+	%\item 254.710.6181
+	%\item Contact information available upon request.
+	\item
+		\ressubheading{Dr. James Stamey}{}{Department of Statistical Science, Baylor University}{}
+	\item	\url{James_Stamey@baylor.edu}
+	%\item \url{254.710.7405}
+	%\item Contact information available upon request.
+% TODO: Ask Landon
+%	\item
+%		\ressubheading{Dr. Landon Sego}{}{Applied Statistics and Computational Modeling, Pacific Northwest National Laboratory}{}
+%	\item	\url{landon.sego@pnnl.gov}
+\end{itemize}
+
+\end{document}
